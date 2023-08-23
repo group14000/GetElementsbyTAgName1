@@ -31,17 +31,14 @@
   </div>
 
   <script>
-    // Using getElementsByClassName
-    const itemsList = document.getElementById('items');
-    const newLiWithClass = document.createElement('li');
-    newLiWithClass.className = 'list-group-item'; // Adding the same class
-    newLiWithClass.textContent = 'New Item with Same Class';
-    itemsList.appendChild(newLiWithClass);
+    // Get the list items using the getElementsByTagName method
+    var items = document.getElementById("items").getElementsByTagName("li");
 
-    // Using getElementsByTagName
-    const newLiWithoutClass = document.createElement('li');
-    newLiWithoutClass.textContent = 'New Item without Class';
-    itemsList.appendChild(newLiWithoutClass);
+    // Change the background color of the 2nd item
+    items[1].style.backgroundColor = "green";
+
+    // Make the 3rd item invisible
+    items[2].style.display = "none";
   </script>
 </body>
 </html>
